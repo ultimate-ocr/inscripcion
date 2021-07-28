@@ -30,6 +30,10 @@ function submitToAPI(e) {
         document.getElementById("error_nombre_emergencia").innerHTML = 'Rellena el nombre del contacto de emergencia'
         ret = true
     }
+    if ($("#nombre_emergencia").val() == '') {
+        document.getElementById("error_nombre_emergencia").innerHTML = 'Rellena el nombre del contacto de emergencia'
+        ret = true
+    }
     /*if (!($("#tandas").val())) {
         getTandas()
         document.getElementById("error_inscripcion").innerHTML = 'Elige una tanda'
