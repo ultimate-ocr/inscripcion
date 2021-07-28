@@ -30,15 +30,16 @@ function submitToAPI(e) {
         document.getElementById("error_nombre_emergencia").innerHTML = 'Rellena el nombre del contacto de emergencia'
         ret = true
     }
-    if ($("#nombre_emergencia").val() == '') {
-        document.getElementById("error_nombre_emergencia").innerHTML = 'Rellena el nombre del contacto de emergencia'
-        ret = true
-    }
     /*if (!($("#tandas").val())) {
         getTandas()
         document.getElementById("error_inscripcion").innerHTML = 'Elige una tanda'
         ret = true
     }*/
+
+    if (!document.getElementById("proteccion_datos").checked) {
+        document.getElementById("error_proteccion_datos").innerHTML = 'Acepta la política de privacidad'
+        ret = true
+    }
     if (ret) return
 
 
@@ -49,7 +50,7 @@ function submitToAPI(e) {
     var bdate = $("#bdate").val();
     var tel_emergencia = $("#tel_emergencia").val();
     var nombre_emergencia = $("#nombre_emergencia").val();
-    // var tandas = $("#tandas").val();
+    //var tandas = $("#tandas").val();
 
     var data = {
         nombre: nombre,
