@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form id="credentials_form">
+        <div class="item">
+            <p>Usuario:</p>
+            <input type="text" id="usuario" />
+        </div>
+        <div class="item">
+            <p>Contraseña</p>
+            <input type="password" id="pass" />
+        </div>
+        <div class="btn-block">
+            <button type="button" onClick="checkCredentials(event)">Enviar</button>
+        </div>
+    </form>
+    <p id="error_log_in" style="display:none">Credenciales erroneas</p>
+    <table id=tabla_participantes " style="width:100%; display:none ">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Teléfono</th>
+            <th>email</th>
+            <th>fecha nacimiento</th>
+            <th>Teléfono emergencia</th>
+            <th>Contacto emergencia</th>
+            <th>Tanda</th>
+            <th>Pagado</th>
+        </tr>
+    </table>
+</body>
+
+</html>
